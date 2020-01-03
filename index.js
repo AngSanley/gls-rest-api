@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize(process.env.DB_DATABASE || 'gls-rest-api', process.env.DB_USER || 'binus', process.env.DB_PASSWORD || 'maya', {
-    host: process.env.DB_HOST || 'localhost',
-    dialect: 'postgres',
-    port: process.env.DB_PORT || 5432
-});
+// const sequelize = new Sequelize(process.env.DB_DATABASE || 'gls-rest-api', process.env.DB_USER || 'binus', process.env.DB_PASSWORD || 'maya', {
+//     host: process.env.DB_HOST || 'localhost',
+//     dialect: 'postgres',
+//     port: process.env.DB_PORT || 5432
+// });
+const sequelize = new Sequelize(process.env.DATABASE_URL);
 const Model = Sequelize.Model;
 const express = require('express');
 const app = express();
