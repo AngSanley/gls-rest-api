@@ -1,12 +1,14 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('gls-rest-api', 'binus', 'maya', {
-    host: 'localhost',
-    dialect: 'postgres'
+const sequelize = new Sequelize(process.env.DB_DATABASE || 'gls-rest-api', process.env.DB_USER || 'binus', process.env.DB_PASSWORD || 'maya', {
+    host: process.env.DB_HOST || 'localhost',
+    dialect: 'postgres',
+    port: process.env.DB_PORT || 5432
 });
 const Model = Sequelize.Model;
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
+const isProduction = process.env.NODE_ENV === 'production'
 
 class Student extends Model {}
 
