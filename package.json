@@ -1,0 +1,15 @@
+{
+  "name": "gls-rest-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AngSanley/gls-rest-api.git",
+  "author": "Stanley <AngSanley@users.noreply.github.com>",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "pg": "^7.17.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3"
+  }
+}
