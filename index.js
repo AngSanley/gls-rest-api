@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize('gls-rest-api', 'binus', 'maya', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'postgres'
 });
 const Model = Sequelize.Model;
 const express = require('express');
